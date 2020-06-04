@@ -1,4 +1,4 @@
-<?php
+<?php //se estan comprobando y validadndo si existen algunos datos.
 	if(isset($_POST["usuario"]) &&
 	 ($_POST["cargo"]) 			&&
 	 ($_POST["sueldo"])			&&
@@ -13,7 +13,7 @@
 		if($err){
 			echo "<h1>error de conexion</h1>";
 			exit(0);
-		}
+		}//se declaran los variables arrays del post adentro de la variable parametros
 		$parametros=array("usuario"=>$_POST["usuario"],"cargo"=>$_POST["cargo"],"sueldo"=>$_POST["sueldo"],"years"=>$_POST["years"],"giro"=>$_POST["giro"],"monto"=>$_POST["monto"]);
 		$result=$client->call("hola",$parametros);
 		echo $client->getError();

@@ -1,4 +1,5 @@
 <?php //se estan comprobando y validadndo si existen algunos datos.
+//AUTOR José Wilfredo España
 	if(isset($_POST["usuario"]) &&
 	 ($_POST["cargo"]) 			&&
 	 ($_POST["sueldo"])			&&
@@ -6,7 +7,7 @@
 	 ($_POST["giro"])){
 		date_default_timezone_set("America/El_Salvador");
 		require_once("nusoap/lib/nusoap.php");
-		$wsdl="http://localhost/webservice/lab2/ws.php?wsdl";
+		$wsdl="http://localhost/webservice/lab2DS_JoseEspana/ws.php?wsdl";
 		$client=new nusoap_client($wsdl,"wsdl");
 		$client->soap_defencoding = 'UTF-8';
 		$err=$client->getError();

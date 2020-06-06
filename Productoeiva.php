@@ -1,10 +1,11 @@
 <?php
+//AUTOR José Wilfredo España
 	if(isset($_POST["codigo"]) &&
 	 ($_POST["nombre"]) 	   &&
 	 ($_POST["precio"])){
 		date_default_timezone_set("America/El_Salvador");
 		require_once("nusoap/lib/nusoap.php");
-		$wsdl="http://localhost/webservice/lab2/ws2.php?wsdl";
+		$wsdl="http://localhost/webservice/lab2DS_JoseEspana/ws2.php?wsdl";
 		$client=new nusoap_client($wsdl,"wsdl");
 		$client->soap_defencoding = 'UTF-8';
 		$err=$client->getError();
@@ -26,7 +27,7 @@
 <body>
 		
 <table>
-	<th colspan="2"><h3>Ingresar datos del empleado</h3></th>
+	<th colspan="2"><h3>Ingresar datos del producto</h3></th>
 <form method="POST">
 <tr>
 	<td>Codigo de producto:</td>

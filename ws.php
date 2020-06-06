@@ -4,7 +4,7 @@ require_once ("nusoap/lib/nusoap.php");
 $server= new nusoap_server;
 $server->configureWSDL('server','urn:server');//->wsdl
 $server->wsdl->schemaTargetNamespace='urn:server'; 
-
+//AUTOR José Wilfredo España
 //se declaran los tipos de datos en el array
 $server->register('hola',
 		array('usuario'=>'xsd:string',

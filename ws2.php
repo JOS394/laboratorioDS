@@ -4,7 +4,7 @@ require_once ("nusoap/lib/nusoap.php");
 $server= new nusoap_server;
 $server->configureWSDL('server','urn:server');//->wsdl
 $server->wsdl->schemaTargetNamespace='urn:server'; 
-
+//AUTOR José Wilfredo España
 //declarando las variables adentro de arrays
 $server->register('productoeiva',
 		array('codigo'=>'xsd:string',
